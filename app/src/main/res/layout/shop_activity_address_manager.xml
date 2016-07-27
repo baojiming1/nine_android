@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mFrameLayout"
+        android:layout_height="wrap_content"></FrameLayout>
+
+
+ <!--   <include layout="@layout/common_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        />
+-->
+    <com.tp.venus.widget.RippleView
+        android:layout_alignParentRight="true"
+        android:id="@+id/add_address"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp35"
+        android:layout_marginRight="@dimen/dp35"
+        android:layout_height="@dimen/dp40"
+        android:text="@string/add_address"
+        android:padding="@dimen/dp10"
+        android:textSize="@dimen/sp17"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:background="@color/themeColor"
+        />
+
+</LinearLayout>

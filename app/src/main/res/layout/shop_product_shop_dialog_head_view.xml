@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/dp10"
+    android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:src="@drawable/default_placeholder"
+            android:id="@+id/shop_view_image"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="beats by dr. dre独奏者第二代头戴式贴耳耳机蓝色Solo2 blue"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/shop_view_image"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/shop_view_title"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/red"
+            android:text="￥155.00"
+            android:layout_toRightOf="@id/shop_view_image"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_below="@id/shop_view_title"
+            android:layout_marginTop="@dimen/dp5"
+            android:id="@+id/shop_view_price"
+            />
+
+</RelativeLayout>

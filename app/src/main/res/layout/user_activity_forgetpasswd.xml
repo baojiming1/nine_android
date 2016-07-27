@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <LinearLayout
+        android:layout_below="@id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="@dimen/dp20"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/mPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_bg_shape"
+            android:padding="@dimen/dp10"
+            android:textColorHint="@color/hintColor"
+            android:hint="@string/phone"/>
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/mCode"
+                android:padding="@dimen/dp10"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bg_shape"
+                android:textColorHint="@color/hintColor"
+                android:hint="@string/code"/>
+
+            <com.tp.venus.widget.RippleView
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@drawable/btn_bg_themecolor_shape"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp40"
+                android:gravity="center"
+                android:textColor="@color/fontColor"
+                android:text="@string/getCode"
+                android:id="@+id/send_code"
+                android:textSize="@dimen/sp15"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_marginTop="@dimen/dp15"
+            android:id="@+id/mPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_bg_shape"
+            android:padding="@dimen/dp10"
+            android:inputType="textPassword"
+            android:textColorHint="@color/hintColor"
+            android:hint="@string/passwd"/>
+
+        <EditText
+            android:layout_marginTop="@dimen/dp15"
+            android:id="@+id/mPasswordAgain"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_bg_shape"
+            android:padding="@dimen/dp10"
+            android:textColorHint="@color/hintColor"
+            android:hint="@string/passwdAgain"/>
+
+        <com.tp.venus.widget.RippleView
+            android:id="@+id/mForgetPasswdBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/bind"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/sp17"
+            android:gravity="center"
+            android:textColor="@color/fontColor"
+            android:background="@drawable/btn_bg_themecolor_shape"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+

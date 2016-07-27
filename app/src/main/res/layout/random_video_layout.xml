@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/video_frament"
+        android:layout_height="200dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/video_layout"
+                >
+               <!-- <io.vov.vitamio.widget.CenterLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/mCenterLayout"
+                    android:orientation="vertical" >
+
+                     <io.vov.vitamio.widget.VideoView
+                         android:id="@+id/mVideoView"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_centerHorizontal="true"
+                         android:layout_centerVertical="true" />
+                </io.vov.vitamio.widget.CenterLayout>-->
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar_layout"
+                >
+                <ProgressBar
+                    android:id="@+id/probar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="视频描述:"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:id="@+id/desc"
+        />
+
+</LinearLayout>

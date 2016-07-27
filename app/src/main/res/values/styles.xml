@@ -1,0 +1,74 @@
+<resources>
+
+    <style name="Theme.BackgroundTranslucent" parent="BaseAppTheme">
+       <!-- <item name="android:windowBackground">@color/transparent</item>-->
+      <!--  <item name="android:colorBackgroundCacheHint">@null</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+      <!--  <item name="android:windowBackground">@null</item>-->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--  DividerItemDecoration类中使用了android:listDivider 来作为分隔线的attr   -->
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    <!--    <item name="android:textAllCaps">false</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>-->
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="@style/BaseAppTheme">
+    </style>
+
+    <style name="fineLinerTheme" parent="AppTheme">
+        <!--  DividerItemDecoration类中使用了android:listDivider 来作为分隔线的attr   -->
+        <item name="android:listDivider">@drawable/divider_bg_fine</item>
+    </style>
+
+
+    <style name="home_tablayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/grey</item>
+        <item name="background">@color/white</item>
+        <item name="tabTextColor">@color/pink</item>
+        <item name="tabSelectedTextColor">@color/themeColor</item>
+    </style>
+
+    <!--  输入框的统一样式  -->
+    <style name="inputStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp15</item>
+        <item name="android:background">@drawable/edit_bg_shape</item>
+        <item name="android:textColorHint">@color/hintColor</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <!-- Background for the search bar -->
+        <item name="searchBackground">@color/themeColor</item>
+        <!-- Change voice icon -->
+        <item name="searchVoiceIcon">@drawable/ic_action_voice_search_inverted</item>
+
+        <!-- Change clear text icon -->
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close_inverted</item>
+
+        <!-- Change up icon -->
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back_inverted</item>
+        <!-- Change icon for the suggestions -->
+        <item name="searchSuggestionIcon">@drawable/ic_suggestion</item>
+        <!-- Change background for the suggestions list view -->
+        <item name="searchSuggestionBackground">@android:color/white</item>
+        <!-- Change text color for edit text. This will also be the color of the cursor -->
+        <item name="android:textColor">@color/white</item>
+        <!-- Change hint text color for edit text -->
+        <item name="android:textColorHint">@color/themeGray</item>
+        <!-- Hint for edit text -->
+        <item name="android:hint">@string/search_hint</item>
+    </style>
+
+
+
+</resources>

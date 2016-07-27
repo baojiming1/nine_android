@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+    <include layout="@layout/common_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_below="@id/mToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="30dp"
+        android:paddingLeft="@dimen/dp20"
+        android:paddingRight="@dimen/dp20"
+        android:background="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/mAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_bg_shape"
+            android:padding="@dimen/dp10"
+            android:textColorHint="@color/hintColor"
+            android:hint="@string/phone"/>
+
+
+
+        <EditText
+            android:layout_marginTop="@dimen/dp15"
+            android:id="@+id/mPassword"
+            android:padding="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_bg_shape"
+            android:textColorHint="@color/hintColor"
+            android:inputType="textPassword"
+            android:hint="@string/passwd"/>
+
+
+        <com.tp.venus.widget.RippleView
+            android:id="@+id/mLoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:text="@string/login"
+            android:padding="@dimen/dp10"
+            android:textSize="@dimen/sp17"
+            android:gravity="center"
+            android:textColor="@color/fontColor"
+            android:background="@drawable/btn_bg_themecolor_shape"
+            />
+
+        <!-- <Button
+             android:id="@+id/mLoginBtn"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="@dimen/dp15"
+             android:text="@string/login"
+             android:padding="@dimen/dp15"
+             android:textSize="@dimen/sp17"
+             android:textColor="@color/fontColor"
+             android:background="@drawable/btn_bg_themecolor_shape"
+             />-->
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/mForget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgetPasswd"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/hintColor"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

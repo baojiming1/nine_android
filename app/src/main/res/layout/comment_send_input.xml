@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:orientation="horizontal"
+android:padding="@dimen/dp10"
+android:background="@color/white"
+    android:gravity="center"
+android:layout_height="wrap_content">
+
+
+        <com.tp.venus.widget.ClearEditText
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_content"
+            android:background="@drawable/input_bg"
+            android:hint="@string/addComment"
+            android:singleLine="true"
+            android:textColorHint="@color/smallFont"
+            android:textSize="15sp"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp5"
+                />
+
+
+
+        <com.tp.venus.widget.RippleView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            android:paddingTop="@dimen/dp7"
+            android:paddingBottom="@dimen/dp7"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/comment_send"
+            android:background="@drawable/btn_bg_themecolor_shape"
+            />
+
+       <!-- <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/send"
+            android:textColor="@color/white"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            android:paddingTop="@dimen/dp7"
+            android:paddingBottom="@dimen/dp7"
+            android:background="@drawable/btn_bg_themecolor_shape"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/comment_send"
+            />-->
+
+
+
+</LinearLayout>

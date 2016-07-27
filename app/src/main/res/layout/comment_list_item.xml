@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp15"
+    android:background="@color/white"
+    >
+
+    <include layout="@layout/common_user_icon"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:id="@+id/comment_icon"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_toRightOf="@id/comment_icon"
+        android:id="@+id/receiver_nickname"
+        android:textSize="@dimen/sp15"
+        android:textColor="@color/bigFont"
+        android:layout_marginLeft="@dimen/dp10"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:text=""
+        android:layout_below="@id/receiver_nickname"
+        android:layout_alignLeft="@id/receiver_nickname"
+        android:textColor="@color/smallFont"
+        android:id="@+id/comment_content"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clock"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016/04/17 20:33"
+            android:layout_marginLeft="@dimen/dp5"
+            android:textColor="@color/smallFont"
+            android:id="@+id/comment_time"
+            android:textSize="@dimen/dp10"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+    <include layout="@layout/common_toolbar"/>
+
+
+    <include layout="@layout/common_recyclerview" android:id="@+id/top_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10" />
+
+    <include layout="@layout/common_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottom_list"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/dp20"
+        android:paddingRight="@dimen/dp15"
+        android:paddingLeft="@dimen/dp15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.tp.venus.widget.RippleView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:background="@drawable/btn_bg_themecolor_shape"
+            android:text="@string/loginout"
+            android:textSize="@dimen/sp20"
+            android:id="@+id/login_out"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+
+

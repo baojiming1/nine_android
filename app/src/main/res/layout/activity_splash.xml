@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jude.rollviewpager.RollPagerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mRollPagerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:alpha="0.3"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp5"
+        android:paddingBottom="@dimen/dp5"
+        android:layout_gravity="right"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/themeColor"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/skip"
+            android:background="@null"
+            android:text="@string/jump_next"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+
+
+<!--
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即体验"
+        android:id="@+id/next"
+        android:layout_gravity="bottom|center"
+        />-->
+
+
+</merge>

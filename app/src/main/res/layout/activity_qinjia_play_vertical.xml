@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/video_main"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:id="@+id/surfaceViewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/loadingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/loadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/video_views"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/live_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/live_back"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/barrage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/barrage_open" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="直播"
+                android:padding="@dimen/dp5"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_gravity="left"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:id="@+id/expand"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content"
+                android:src="@drawable/expand_open" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/common_tablayout_viewpager" />
+
+
+
+</LinearLayout>

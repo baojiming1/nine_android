@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tp.venus.widget.RippleView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mRippleView"
+    android:layout_width="120dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/dp5"
+    android:paddingTop="@dimen/dp5"
+    android:text="@string/statement"
+    android:gravity="center"
+    android:textColor="@color/fontColor"
+    android:background="@drawable/btn_bg_red_shape"
+    />
+
+
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:gravity="right"
+    android:layout_height="match_parent">
+
+
+    <com.tp.venus.widget.RippleView
+        android:id="@+id/apply_after_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/apply_after_sales"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:background="@drawable/btn_bg_lightgreen_shape"
+        android:visibility="gone"
+        />
+
+
+    <com.tp.venus.widget.RippleView
+        android:id="@+id/confirm_receipt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/confirm_receipt"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:background="@drawable/btn_bg_red_shape"
+        android:visibility="gone"
+        />
+
+    <com.tp.venus.widget.RippleView
+        android:id="@+id/apply_refund"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/apply_refund"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:background="@drawable/btn_bg_lightgreen_shape"
+        android:visibility="gone"
+        />
+
+    <com.tp.venus.widget.RippleView
+        android:id="@+id/statement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/statement"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:background="@drawable/btn_bg_red_shape"
+        android:visibility="gone"
+        />
+
+    <com.tp.venus.widget.RippleView
+        android:id="@+id/cancel_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:text="@string/cancel_order"
+        android:gravity="center"
+        android:textColor="@color/fontColor"
+        android:visibility="gone"
+        android:background="@drawable/btn_bg_grey_shape"
+        />
+
+
+
+</LinearLayout>-->

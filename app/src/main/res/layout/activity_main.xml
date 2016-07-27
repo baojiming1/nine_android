@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <com.tp.venus.widget.NoScrollViewPager
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/mNoScrollViewPager"
+            ></com.tp.venus.widget.NoScrollViewPager>
+
+
+        <LinearLayout
+            android:id="@+id/main_bottom" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/themeColor"
+            android:gravity="center_vertical" android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <ImageView
+                    android:id="@+id/iShopping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:scaleType="centerInside"   android:src="@drawable/tab_shop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp10"
+                    android:text="@string/shopping"
+                    android:id="@+id/iShoppingTv"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+                    <ImageView
+                        android:id="@+id/ibHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:scaleType="centerInside"   android:src="@drawable/tab_home" />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/ibMy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:scaleType="centerInside"   android:src="@drawable/tab_my" />
+
+                    <TextView
+                        android:id="@+id/message_notice"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:background="@drawable/message_notice"
+                        android:layout_alignRight="@id/ibMy"
+                        android:layout_alignTop="@id/ibMy"
+                        />
+
+
+                </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp10"
+                        android:text="@string/my"
+                        android:id="@+id/ibMyTv"
+                        />
+
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+</LinearLayout>

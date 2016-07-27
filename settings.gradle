@@ -1,0 +1,4 @@
+include ':app', ':social_sdk_library_project', ':vitamio'
+/*include ':playerLibRelease'
+include ':playerskin'
+include ':playerdemo'*/

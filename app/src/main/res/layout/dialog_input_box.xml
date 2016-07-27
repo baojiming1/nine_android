@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp20"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="提示"
+                android:textSize="@dimen/sp15"
+                android:textStyle="bold"
+                android:id="@+id/title"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="联系方式"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/dp8"
+                android:layout_marginTop="@dimen/dp10"
+                android:textColorHint="@color/smallFont"
+                android:id="@+id/phone"
+                android:textSize="@dimen/sp14"
+                />
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:hint="请输入"
+                android:background="@drawable/bg_edittext"
+                android:layout_height="@dimen/dp80"
+                android:inputType="textMultiLine"
+                android:minLines="1"
+                android:maxLines="6"
+                android:paddingTop="@dimen/dp5"
+                android:textSize="@dimen/sp14"
+                android:textColorHint="@color/smallFont"
+                android:paddingLeft="@dimen/dp5"
+                android:maxLength="60"
+                android:id="@+id/message"
+                android:layout_marginTop="@dimen/dp10"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp10"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp40"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:background="@color/themeColor"
+                    android:id="@+id/confirm"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp40"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:background="@color/themeGray"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:id="@+id/cannel"
+                    />
+
+
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

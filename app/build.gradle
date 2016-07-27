@@ -1,0 +1,241 @@
+apply plugin: 'com.android.application'
+/*apply plugin: 'com.android.databinding'*/
+//应用 Bugtags 插件
+/*apply plugin: 'com.bugtags.library.plugin'*/
+
+//Bugtags 插件配置
+/*bugtags {
+    //自动上传符号表功能配置，如果需要根据 build varint 配置，请参考插件详细使用说明
+    appKey "5370f04554388fa76458c9bd4a605311"  //这里是你的 appKey
+    appSecret "APP_SECRET"    //这里是你的 appSecret，管理员在设置页可以查看
+    mappingUploadEnabled true
+    //网络跟踪功能配置(企业版)
+    trackingNetworkEnabled true
+}*/
+
+android {
+
+
+   /* compileSdkVersion 22//此版本必须是22  否则录制视频崩溃 等待SDK  后续更新修复此问题
+    buildToolsVersion '23.0.1'*/
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+  /*  productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: "Wandoujia", JPUSH_APPKEY_VALUE : '2eacfc319d7a5ddc2a33e673',
+                                                 UMENG_APPKEY_VALUE : '56e252b867e58e1adc000173',
+                                                 YZ_APP_ID_VALUE:'b8c2e965ffe5479413', YZ_APP_SECRET_VALUE : '68b7fb38fd12453f19a384736ed00dc0']
+    }*/
+
+    /** gradle assembleRelease **/
+    productFlavors{
+        wandoujia {}
+        百度 {}
+        小米 {}
+        OPPO {}
+        应用宝 {}
+        华为 {}
+        魅族{}
+        c360 {}
+        三星 {}
+        安智 {}
+        应用汇 {}
+        锤子 {}
+        木蚂蚁 {}
+        PP助手 {}
+        优亿 {}
+        移动MM {}
+        联想 {}
+        搜狗 {}
+        机锋 {}
+        N多 {}
+        联通沃 {}
+        天翼 {}
+        乐视 {}
+        UC {}
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.tp.venus"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 215
+        versionName "2.1.5"
+        multiDexEnabled true
+    }
+
+   signingConfigs {
+        debug {
+            storeFile file("venus.jks")
+            storePassword "111111"
+            keyAlias "venus"
+            keyPassword "111111"
+        }
+       release{
+           storeFile file("venus.jks")
+           storePassword "111111"
+           keyAlias "venus"
+           keyPassword "111111"
+       }
+   }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false            //移除无用布局文件
+            signingConfig signingConfigs.debug
+            ndk {
+                abiFilters "x86", "armeabi-v7a", "armeabi"
+                //abiFilters ABI_FILTERS
+
+            }
+        }
+
+
+        release {
+// 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+
+            minifyEnabled false
+            shrinkResources true             //移除无用布局文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            ndk {
+                abiFilters "x86", "armeabi-v7a", "armeabi"
+                //abiFilters ABI_FILTERS
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java']
+            res.srcDirs = [
+                        'src/main/res',
+                        'src/main/res/user'
+                        ]
+            assets.srcDirs = ['src/main/assets']
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+        instrumentTest.setRoot('tests')
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+}
+
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    /**     support  **/
+    compile 'com.android.support:percent:23.2.+'
+    compile 'com.android.support:support-annotations:23.2.+'
+    compile 'com.android.support:appcompat-v7:23.2.+'
+    compile 'com.android.support:design:23.2.+'
+    compile 'com.android.support:cardview-v7:23.2.+'
+    compile 'com.android.support:recyclerview-v7:23.2.+'
+
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'de.greenrobot:greendao:2.0.0'
+
+    /**  网络请求 **/
+    compile 'com.squareup.okhttp:logging-interceptor:2.7.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+
+    compile 'com.jakewharton:butterknife:6.0.0'
+
+    compile 'com.github.bumptech.glide:okhttp-integration:1.3.1@aar'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+
+    //圆形图
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    compile 'com.zhy:flowlayout-lib:1.0.1'
+
+    //搜索
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+    compile 'com.quinny898.library.persistentsearch:library:1.1.0-SNAPSHOT'
+
+    /**     logger **/
+    compile 'com.orhanobut:logger:1.8'
+
+    //替换fastjson
+    compile 'com.alibaba:fastjson:1.2.0'
+
+    //图片轮播
+    compile 'com.jude:rollviewpager:1.2.4'
+    compile 'com.nineoldandroids:library:2.4.0'
+    //#ActiveAndroid
+
+    //对话框
+    compile 'com.orhanobut:dialogplus:1.11@aar'
+
+
+
+    /**    图片放大查看器     **/
+    compile 'com.alexvasilkov:gesture-views:2.1.1'
+ /*   compile 'com.commit451:PhotoView:1.2.4'*/
+
+    /** loading动画 **/
+    compile 'com.github.ybq:Android-SpinKit:1.0.1'
+ /*   compile 'pl.tajchert:waitingdots:0.2.0'*/
+
+    /**   rx  **/
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.3.0'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.f2prateek.rx.preferences:rx-preferences:1.0.1'
+
+    /**   七牛      **/
+    compile 'com.qiniu:qiniu-android-sdk:7.0.9'
+    /**   友盟      **/
+    compile 'com.umeng.analytics:analytics:5.6.7'
+
+    compile project(':social_sdk_library_project')
+ /*   compile project(':JPushExample')*/
+    /**  视频  **/
+    compile project(':vitamio')
+
+    /*弹幕库*/
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.4.9'
+
+   /* compile 'com.bugtags.library:bugtags-lib:1.2.6'*/
+/*    compile project(':playerskin')
+    compile project(':playerLibRelease')*/
+/*   compile project(':playerdemo')*/
+}

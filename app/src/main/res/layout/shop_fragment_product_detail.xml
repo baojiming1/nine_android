@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+
+        android:id="@+id/mSwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.tp.venus.widget.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.jude.rollviewpager.RollPagerView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/mRollPagerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp300"
+                        app:rollviewpager_hint_gravity="center"
+                        android:background="@drawable/default_placeholder"
+                        />
+
+                    <com.tp.venus.widget.LabelView
+                        xmlns:lv="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:id="@+id/mLabelView"
+                        android:visibility="gone"
+                        lv:lv_text="已下架"
+                        lv:lv_text_size="12sp"/>
+
+                </FrameLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp10"
+                    android:background="@color/white"
+                    >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/red"
+                                    android:textSize="@dimen/sp18"
+                                    android:text="￥0.00"
+                                    android:id="@+id/price"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="￥0.00"
+                                    android:layout_marginLeft="@dimen/dp5"
+                                    android:textColor="@color/dark_grey"
+                                    android:textSize="@dimen/sp12"
+                                    android:id="@+id/original_price"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_alignParentRight="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="运费："
+                                    android:textSize="@dimen/sp12"
+                                    android:textColor="@color/dark_grey"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="0.00"
+                                    android:id="@+id/freight"
+                                    android:textSize="@dimen/sp12"
+                                    android:textColor="@color/dark_grey"
+                                    />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/sp17"
+                                android:text=""
+                                android:id="@+id/title"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:textStyle="bold"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp5"
+                                android:text=""
+                                android:lineSpacingExtra="@dimen/dp5"
+                                android:id="@+id/info"
+                                />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:padding="@dimen/dp0"
+                    android:orientation="vertical"
+                    android:id="@+id/webview_layout"
+                    android:layout_height="wrap_content">
+
+
+                </LinearLayout>
+
+     <!--           <WebView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:id="@+id/detail"
+                    android:padding="@dimen/dp0"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content"
+                    tools:ignore="WebViewLayout">
+                </WebView>-->
+
+
+
+            </LinearLayout>
+
+
+        </com.tp.venus.widget.MyScrollView >
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+</LinearLayout>
+

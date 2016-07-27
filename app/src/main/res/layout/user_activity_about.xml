@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/common_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/dp25"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_launcher"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:textSize="@dimen/sp17"
+                android:layout_marginTop="@dimen/dp10"
+                android:textColor="@color/bigFont"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:id="@+id/version"
+                android:layout_marginTop="@dimen/dp5"
+                android:textColor="@color/smallFont"
+                android:text="版本号 1.0.1"
+                android:paddingBottom="@dimen/dp25"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="联系我们"
+        android:textColor="@color/bigFont"
+        android:padding="@dimen/dp10"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp10"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电话:"
+                android:textColor="@color/bigFont"
+                android:id="@+id/about_q1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/telphone"
+                android:textColor="@color/bigFont"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_toRightOf="@id/about_q1"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/forward"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/grey"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="@dimen/dp10"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客服QQ:"
+                android:textColor="@color/bigFont"
+                android:id="@+id/about_q2"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kefu_qq"
+                android:textColor="@color/bigFont"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_toRightOf="@id/about_q2"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/forward"
+                />
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

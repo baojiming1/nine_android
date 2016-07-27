@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:gravity="center"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:src="@drawable/default_placeholder"
+        android:id="@+id/product_image"
+        android:scaleType="fitXY"
+        android:layout_margin="@dimen/dp5"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="防火水表"
+        android:id="@+id/product_title"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp12"
+        android:layout_marginBottom="@dimen/dp5"
+        />
+
+</LinearLayout>
